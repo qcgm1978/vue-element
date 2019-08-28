@@ -5,6 +5,7 @@ import "element-ui/lib/theme-chalk/index.css";
 import App from "./App.vue";
 import Nuxt from "./Nuxt.vue";
 import Grid from "./Grid.vue";
+import Form from "./Form.vue";
 import { Button, Select, Dialog, Notification } from "element-ui";
 // import ElementUI from "element-ui";
 import Transition from "./Transition.vue";
@@ -28,7 +29,8 @@ const routes = [
   { path: "/", component: App },
   { path: "/nuxt", component: Nuxt },
   { path: "/grid", component: Grid },
-  { path: "/transition", component: Transition }
+  { path: "/transition", component: Transition },
+  { path: "/form", component: Form }
 ];
 
 // 3. Create the router instance and pass the `routes` option
