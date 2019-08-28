@@ -44,6 +44,9 @@
       <el-form-item label="Activity form">
         <el-input type="textarea" v-model="form.desc"></el-input>
       </el-form-item>
+      <el-form-item label="Calendar">
+        <el-calendar v-model="form.calendar" :range="['2019-03-04', '2019-03-24']"></el-calendar>
+      </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="onSubmit">Create</el-button>
         <el-button>Cancel</el-button>
@@ -56,6 +59,7 @@ export default {
   data() {
     return {
       form: {
+        calendar: "2019-03-05",
         name: "",
         region: "",
         date1: "",
@@ -69,7 +73,15 @@ export default {
   },
   methods: {
     onSubmit() {
-      console.log(JSON.stringify(this.form));
+      let obj = {};
+      for (let p in this.form) {
+        if (p === "calendar") {
+          obj[p] = this.form.calendar.toISOString().slice(0, 10);
+        } else if (this.form[p]) {
+          obj[p] = this.form[p];
+        }
+      }
+      console.log(JSON.stringify(obj));
     }
   }
 };

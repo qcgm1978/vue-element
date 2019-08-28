@@ -6,6 +6,7 @@ import App from "./App.vue";
 import Nuxt from "./Nuxt.vue";
 import Grid from "./Grid.vue";
 import Form from "./Form.vue";
+import Tree from "./Tree.vue";
 import { Button, Select, Dialog, Notification } from "element-ui";
 // import ElementUI from "element-ui";
 import Transition from "./Transition.vue";
@@ -30,6 +31,7 @@ const routes = [
   { path: "/nuxt", component: Nuxt },
   { path: "/grid", component: Grid },
   { path: "/transition", component: Transition },
+  { path: "/tree", component: Tree },
   { path: "/form", component: Form }
 ];
 
