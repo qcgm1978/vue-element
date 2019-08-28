@@ -4,6 +4,7 @@ import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import App from "./App.vue";
 import Nuxt from "./Nuxt.vue";
+import Grid from "./Grid.vue";
 import { Button, Select, Dialog, Notification } from "element-ui";
 // import ElementUI from "element-ui";
 import Transition from "./Transition.vue";
@@ -26,6 +27,7 @@ Vue.use(VueRouter);
 const routes = [
   { path: "/", component: App },
   { path: "/nuxt", component: Nuxt },
+  { path: "/grid", component: Grid },
   { path: "/transition", component: Transition }
 ];
 
