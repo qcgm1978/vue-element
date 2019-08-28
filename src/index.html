@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>element-starter</title>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>element-starter</title>
-</head>
-
-<body>
-  <div id="app"></div>
-</body>
-
+  <body>
+    <div id="app">
+      <h1>Hello App!</h1>
+      <p>
+        <!-- use router-link component for navigation. -->
+        <!-- specify the link by passing the `to` prop. -->
+        <!-- `<router-link>` will be rendered as an `<a>` tag by default -->
+        <router-link to="/">Go to Root</router-link>
+        <router-link to="/nuxt">Go to Nuxt</router-link>
+        <router-link to="/transition">Go to Transition</router-link>
+      </p>
+      <!-- route outlet -->
+      <!-- component matched by the route will render here -->
+      <router-view></router-view>
+    </div>
+  </body>
 </html>
